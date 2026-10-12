@@ -1,0 +1,91 @@
+/* Estilo compartido por todos los temas. No hace falta tocarlo. */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --azul: #2f6bff;
+  --violeta: #8b5cf6;
+  --fondo: #0b0d12;
+  --tarjeta: #12151d;
+  --borde: #232838;
+  --texto: #b8bfcc;
+}
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: 'Inter', system-ui, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+}
+.slide {
+  min-height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.1rem;
+  animation: entra .6s ease both;
+}
+h1, h2, h3 { font-family: 'Space Grotesk', 'Inter', sans-serif; color: #fff; margin: 0; }
+h1 { font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.15; font-weight: 700; }
+.subtitulo { font-size: clamp(1.05rem, 2.5vw, 1.45rem); color: #d5daf0; margin: 0; }
+p { margin: 0; }
+.kw  { color: #7aa2ff; font-weight: 600; }
+.kw2 { color: #b79cff; font-weight: 600; }
+
+.tarjeta {
+  background: var(--tarjeta);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  padding: 1.1rem 1.25rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .35);
+  height: 100%;
+}
+.tarjeta h2 { font-size: 1.1rem; margin-bottom: .35rem; }
+.tarjeta.azul { border-color: #2f4a9a; }
+.tarjeta.violeta { border-color: #5b3fa8; }
+.tarjeta ul { margin: 0; padding-left: 1.1rem; }
+.tarjeta li { margin-bottom: .35rem; }
+.dato small { display: block; color: #7d86a0; }
+.dato span { color: #e6e9f5; }
+
+.num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.8rem; height: 1.8rem; border-radius: 50%;
+  background: linear-gradient(135deg, var(--azul), var(--violeta));
+  color: #fff; font-weight: 700; margin-bottom: .5rem;
+}
+.clave {
+  border-left: 4px solid var(--violeta);
+  background: rgba(47, 107, 255, .09);
+  padding: .9rem 1.1rem;
+  border-radius: 0 12px 12px 0;
+  color: #e6e9f5;
+}
+.formula {
+  display: inline-block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.4rem, 4vw, 2.1rem);
+  color: #fff;
+  background: var(--tarjeta);
+  border: 1px solid #3a4ea0;
+  border-radius: 14px;
+  padding: .4rem 1.2rem;
+  box-shadow: 0 0 24px rgba(79, 140, 255, .25);
+}
+.centro { text-align: center; }
+
+/* Figuras (imágenes debajo del texto, centradas) */
+.fig { text-align: center; margin-top: .5rem; }
+.fig svg { width: 100%; max-width: 440px; height: auto; }
+.fig .base  { stroke: #2b3350; stroke-width: 2; fill: none; }
+.fig .acc   { stroke: url(#g); stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.fig .nodo  { fill: #1a2036; stroke: #3b4a7a; stroke-width: 2; }
+.fig .glow  { fill: #4f8cff; }
+.fig .viol  { fill: #8b5cf6; }
+.fig .verde { fill: #34d399; }
+.fig .panel { fill: #12151d; stroke: #232838; stroke-width: 2; }
+.fig .muro  { fill: #232838; }
+
+@keyframes entra { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .slide { animation: none; } }

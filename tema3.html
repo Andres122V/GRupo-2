@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¿Cómo funciona la heurística?</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="estilo.css" rel="stylesheet">
+</head>
+<body>
+<main class="slide">
+
+  <h1>¿Cómo funciona la <span class="kw">heurística</span>?</h1>
+  <p>La heurística utiliza una <span class="kw">estimación</span> para orientar la <span class="kw">búsqueda</span> de una solución. El sistema analiza las opciones disponibles y prioriza las que parecen más prometedoras.</p>
+  <div class="row g-3">
+    <div class="col-6 col-lg-3"><div class="tarjeta"><span class="num">1</span><h2>Identificar el problema</h2><p>Determinar qué objetivo se quiere alcanzar.</p></div></div>
+    <div class="col-6 col-lg-3"><div class="tarjeta"><span class="num">2</span><h2>Explorar opciones</h2><p>Identificar los caminos o soluciones posibles.</p></div></div>
+    <div class="col-6 col-lg-3"><div class="tarjeta"><span class="num">3</span><h2>Estimar resultados</h2><p>Calcular qué opción parece más conveniente.</p></div></div>
+    <div class="col-6 col-lg-3"><div class="tarjeta"><span class="num">4</span><h2>Elegir un camino</h2><p>Continuar por las opciones más prometedoras.</p></div></div>
+  </div>
+  <div class="row g-3">
+    <div class="col-md-6"><div class="tarjeta azul"><h2>Ejemplo</h2><p>Un sistema de navegación quiere encontrar una ruta. Puede estimar qué tan lejos está el destino desde diferentes puntos y usar esa información para decidir qué camino explorar.</p></div></div>
+    <div class="col-md-6"><div class="tarjeta violeta"><h2>Función heurística</h2><p>Se representa normalmente por <span class="formula" style="font-size:1.1rem;padding:.1rem .6rem">h(n)</span> y estima el costo o la distancia que falta para alcanzar el objetivo desde un estado determinado.</p></div></div>
+  </div>
+<div class="fig"><svg viewBox="0 0 480 200" role="img" aria-label="Diagrama de cuatro etapas conectadas: problema, opciones, estimación y solución"><defs><linearGradient id="g" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="480" y2="200"><stop offset="0" stop-color="#2f6bff"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient><filter id="gl" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5"/></filter></defs><rect x="20" y="55" width="90" height="90" rx="16" class="panel"/><rect x="140" y="55" width="90" height="90" rx="16" class="panel"/><rect x="260" y="55" width="90" height="90" rx="16" class="panel"/><rect x="380" y="55" width="90" height="90" rx="16" class="panel"/><circle cx="65" cy="100" r="24" class="base"/><circle cx="65" cy="100" r="12" class="base"/><circle cx="65" cy="100" r="9" class="glow" filter="url(#gl)" opacity=".8"/><circle cx="65" cy="100" r="5" class="glow"/><line x1="165" y1="100" x2="205" y2="72" class="base"/><line x1="165" y1="100" x2="205" y2="100" class="base"/><line x1="165" y1="100" x2="205" y2="128" class="base"/><circle cx="165" cy="100" r="6" class="nodo"/><circle cx="207" cy="72" r="6" class="nodo"/><circle cx="207" cy="100" r="6" class="nodo"/><circle cx="207" cy="128" r="10" class="glow" filter="url(#gl)" opacity=".8"/><circle cx="207" cy="128" r="6" class="glow"/><path d="M280,125 A25 25 0 0 1 330,125" class="acc"/><line x1="305" y1="125" x2="320" y2="102" class="base"/><circle cx="305" cy="125" r="9" class="glow" filter="url(#gl)" opacity=".8"/><circle cx="305" cy="125" r="5" class="glow"/><path d="M405,100 L420,116 L448,84" class="acc"/><path d="M112,100 H136 M130,94 L137,100 L130,106" class="acc" style="stroke-width:3"/><path d="M232,100 H256 M250,94 L257,100 L250,106" class="acc" style="stroke-width:3"/><path d="M352,100 H376 M370,94 L377,100 L370,106" class="acc" style="stroke-width:3"/></svg></div>
+</main>
+<script src="tema.js"></script>
+</body>
+</html>
